@@ -1,0 +1,13 @@
+<!-- voting_app/templates/voting_app/index.html -->
+<ul>
+    {% for question in questions %}
+        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+</ul>
+<style>
+    li{
+        font-size: 30px;
+        text-decoration: none;
+
+    }
+</style>
