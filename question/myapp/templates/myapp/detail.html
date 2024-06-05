@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'myapp/style.css' %}" type="text/css" media="screen">
 </head>
 <body>
-<!-- voting_app/templates/voting_app/detail.html -->
 <h2>{{ question.question_text }}</h2>
 <ul>
     {% for choice in question.choice_set.all %}
